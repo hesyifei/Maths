@@ -1,0 +1,231 @@
+\documentclass{article}
+
+%\usepackage{showframe} % to show frames
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{comment}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	left=10mm,
+	right=10mm,
+	top=20mm,
+	bottom=20mm,
+}
+
+\title{Limits and the Number $e$}
+\author{Arefly}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{By \textbf{AREFLY.COM}}
+\lhead{Limits and the Number $e$}
+\rfoot{Page \thepage}
+\lfoot{By \LaTeX}
+
+\begin{document}
+
+\begin{multicols}{2}
+
+\noindent\begin{align*}
+	\frac{1}{x^a} &= x^{-a} \\
+	\sqrt[a]{x} &= x^{\frac{1}{a}}
+\end{align*}
+
+\begin{align*}
+	\ln x &= \log_e x
+\end{align*}
+
+\begin{align*}
+	\ln e^x &= x \\
+	e^{\ln x} &= x \\
+	\ln 1 &= 0 \\
+	\ln e &= 1 \\
+	\ln b &= \frac{\log_a b}{\log_a e}
+\end{align*}
+
+\columnbreak
+
+\noindent\begin{align*}
+	\ln M^k &= k\ln M \\
+	\ln MN &= \ln M + \ln N \\
+	\ln \frac{M}{N} &= \ln M - \ln N
+\end{align*}
+
+\begin{align*}
+	e^x &= \lim_{n \to \infty} (1+\frac{x}{n})^n \\
+	&= \lim_{t \to 0} (1+tx)^{\frac{1}{t}} \\
+	&= 1+\frac{x}{1!}+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots \\
+	&= \sum_{r=0}^{\infty} \frac{x^r}{r!}
+\end{align*}
+
+\end{multicols}
+
+\noindent\rule{\textwidth}{0.2pt}
+
+\begin{multicols}{2}
+
+\noindent\begin{align*}
+	(\text{Let $a$ be } & \text{a number including $\infty$ and $-\infty$,} \\
+	\text{$k$ be } & \text{constant}) \\
+	\lim_{x \to a} k &= k \\
+	\lim_{x \to a} kf(x) &= k\lim_{x \to a} f(x) \\
+	\lim_{x \to a} [f(x) \pm g(x)] &= \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x) \\
+	\lim_{x \to a} [f(x) \cdot g(x)] &= \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) \\
+	\lim_{x \to a} [f(x)^2] &= [\lim_{x \to a} f(x)]^2 \\
+	\lim_{x \to a} \frac{f(x)}{g(x)} &= \frac{\lim\limits_{x \to a} f(x)}{\lim\limits_{x \to a} g(x)} \text{ for $\lim_{x \to a} g(x) \neq 0$} \\
+	\lim_{x \to a} f[g(x)] &= f[\lim_{x \to a} g(x)]
+\end{align*}
+
+\columnbreak
+
+\begin{align*}
+	\lim_{x \to 0} \frac{\sin \theta}{\theta} &= \lim_{x \to 0} \frac{\theta}{\sin \theta} = 1 \\
+	\lim_{x \to 0} \frac{e^x - 1}{x} &= 1
+\end{align*}
+
+\begin{align*}
+	\lim_{x \to \infty} \frac{1}{x} = \lim_{x \to -\infty} \frac{1}{x} &= 0 \\
+	\lim_{x \to \infty} \frac{a}{x} = a\lim_{x \to \infty} \frac{1}{x} &= 0 \\
+	\lim_{x \to \infty} \frac{1}{x^2} = (\lim_{x \to \infty} \frac{1}{x})^2 &= 0^2 = 0 \\
+\end{align*}
+
+\end{multicols}
+
+\noindent\begin{align*}
+	\lim_{x \to \infty} a^x &= \infty& &\text{when $a>1$} \\
+	\cdots &= 0& &\text{when $0<a<1$} \\
+	\\
+	\lim_{x \to -\infty} a^x = \lim_{x \to \infty} a^{-x} = \lim_{x \to \infty} \frac{1}{a^x} &= 0& &\text{when $a>1$} \\
+	\cdots &= \infty& &\text{when $0<a<1$}
+\end{align*}
+
+\noindent\begin{align*}
+	\text{L'Hopital's rule: }&\text{(when $\frac{f(x)}{g(x)}$ is undefined, e.g. $\frac{0}{0}$)} \\
+	\lim_{x \to a} \frac{f(x)}{g(x)} &= \lim_{x \to a} \frac{f'(x)}{g'(x)} \\
+\end{align*}
+
+\begin{align*}
+	\text{Case 1: }&\lim_{x \to \infty} \frac{ax^{\text{bigger}}+\cdots}{bx^{\text{smaller}}+\cdots}\text{ does not exist.} \\
+	\text{Case 2: }&\lim_{x \to \infty} \frac{ax^{\text{smaller}}+\cdots}{bx^{\text{bigger}}+\cdots} = 0 \\
+	\text{Case 3: }&\lim_{x \to \infty} \frac{ax^{\text{same}}+\cdots}{bx^{\text{same}}+\cdots} = \frac{a}{b}
+\end{align*}
+
+
+
+\newpage
+
+\section*{Examples}
+
+\raggedcolumns
+\begin{multicols}{3}
+
+\noindent\begin{align*}
+	&\text{Target: denominator $\neq$ 0} \\
+	\\
+	&\lim_{x \to 5} \frac{x^2}{x+1} \\
+	&= \frac{25}{6} \\
+	\\
+	\\
+	&\lim_{x \to 0} \frac{x^3+3x^2+2x}{x^2-3x} \\
+	&= \lim_{x \to 0} \frac{x(x^2+3x+2)}{x(x-3)} \\
+	&= \lim_{x \to 0} \frac{x^2+3x+2}{x-3} \\
+	&= -\frac{2}{3}
+	\\
+	\\
+	&\lim_{x \to 1} \frac{2x-2}{\sqrt{x+3}-2} \\
+	&= \lim_{x \to 1} \frac{2x-2}{\sqrt{x+3}-2} \cdot \frac{\sqrt{x+3}+2}{\sqrt{x+3}+2} \\
+	&= \lim_{x \to 0} \frac{2(x-1)(\sqrt{x+3}+2)}{x-1} \\
+	&= 8 \\
+	\\
+	\\
+	&\lim_{x \to \infty} \frac{4^{x+1}}{17^{\frac{x}{2}}} \\
+	&= \lim_{x \to \infty} \frac{4^x\cdot4}{(17^{\frac{1}{2}})^x} \\
+	&= \lim_{x \to \infty} (\frac{4}{17^{\frac{1}{2}}})^x \cdot 4 \\
+	&= 0 \cdot 4 \\
+	&= 0 \\
+	\\
+	\\
+	&\lim_{x \to \infty} \frac{2x^3+x^2+7}{x^2+x-1} \\
+	&= \lim_{x \to \infty} \frac{\frac{2x^3+x^2+7}{x^2}}{\frac{x^2+x-1}{x^2}} \\
+	&= \cdots \\
+	&= \lim_{x \to \infty} 2x + 1 \\
+	&\text{When $x \to \infty$, $2x \to \infty$.} \\
+	&\therefore \text{$\lim_{x \to \infty} \frac{2x^3+x^2+7}{x^2+x-1}$ does not exist.}
+\end{align*}
+
+\columnbreak
+
+\noindent\begin{align*}
+	&\text{Target: form pattern} \\
+	\\
+	&\lim_{x \to 0} \frac{1-\cos 2\theta}{(2\theta)^2} \\
+	&= \lim_{x \to 0} \frac{1-(1-2\sin^2 \theta)}{4\theta^2} \\
+	&= \lim_{x \to 0} \frac{2\sin^2 \theta}{4\theta^2} \\
+	&= \frac{1}{2} \lim_{x \to 0} \frac{4\sin^2 \theta}{4\theta^2} \\
+	&= \frac{1}{2} (\lim_{x \to 0} \frac{\sin \theta}{\theta})^2 \\
+	&= \frac{1}{2} \\
+	\\
+	\\
+	&\lim_{\theta \to \pi} \frac{2\cos \frac{\theta}{2}}{\pi-\theta} \\
+	&= \lim_{\theta \to \pi} \frac{2\sin (\frac{\pi}{2}-\frac{\theta}{2})}{\pi-\theta} \\
+	&= \lim_{\theta \to \pi} \frac{2\sin (\frac{\pi-\theta}{2})}{2(\frac{\pi-\theta}{2})} \\
+	&= \lim_{\theta \to \pi} \frac{\sin (\frac{\pi-\theta}{2})}{\frac{\pi-\theta}{2}} \\
+	&= 1 \\
+	\\
+	\\
+	&\lim_{x \to 0} \frac{e^{3x} - 1}{2x} \\
+	&= \lim_{x \to 0} \frac{e^{3x} - 1}{3x} \cdot \frac{3}{2} \\
+	&= \frac{3}{2} \\
+	\\
+	\\
+	&\lim_{x \to 0} \frac{\sin x}{e^{2x}+3e^x-4} \\
+	&= \lim_{x \to 0} \frac{\frac{\sin x}{x}}{\frac{e^{2x}-1}{x}+\frac{3(e^x-1)}{x}} \\
+	&= \lim_{x \to 0} \frac{1}{\frac{2(e^{2x}-1)}{2x}+\frac{3(e^x-1)}{x}} \\
+	&= \frac{1}{2+3} \\
+	&= \frac{1}{5} \\
+\end{align*}
+
+\columnbreak
+
+\noindent\begin{align*}
+	&\lim_{n \to \infty} (1+\frac{1}{4n})^n \\
+	&\text{Let $k=4n$.} \\
+	&\text{When $n \to \infty$, $k \to \infty$.} \\
+	&\lim_{n \to \infty} (1+\frac{1}{4n})^n \\
+	&= \lim_{k \to \infty} (1+\frac{1}{k})^{\frac{k}{4}} \\
+	&= \lim_{k \to \infty} [(1+\frac{1}{k})^k]^{\frac{1}{4}} \\
+	&= [\lim_{k \to \infty} (1+\frac{1}{k})^k]^{\frac{1}{4}} \\
+	&= e^{\frac{1}{4}} \\
+	\\
+	\\
+	&\lim_{x \to -\infty} \frac{x^2-3x+7}{2x^2-6x+3} \\
+	&= \lim_{x \to -\infty} \frac{\frac{x^2-3x+7}{x^2}}{\frac{2x^2-6x+3}{x^2}} \\
+	&= \lim_{x \to -\infty} \frac{1-\frac{3}{x}+\frac{7}{x^2}}{2-\frac{6}{x}+\frac{3}{x^2}} \\
+	&= \frac{1}{2}
+	\\
+	\\
+	&\lim_{x \to \infty} (\sqrt{x+1}-\sqrt{x-1}) \\
+	&= \lim_{x \to \infty} \frac{(\sqrt{x+1}-\sqrt{x-1})(\sqrt{x+1}+\sqrt{x-1})}{\sqrt{x+1}+\sqrt{x-1}} \\
+	&= \lim_{x \to \infty} \frac{(x+1)-(x-1)}{\sqrt{x+1}+\sqrt{x-1}} \\
+	&= \lim_{x \to \infty} \frac{2}{\sqrt{x+1}+\sqrt{x-1}} \\
+	&\text{When $x \to \infty$,} \\
+	&\text{we have $(\sqrt{x+1}+\sqrt{x-1}) \to \infty$.} \\
+	&\therefore \lim_{x \to \infty} (\sqrt{x+1}-\sqrt{x-1}) = 0 \\
+	\\
+	\\
+	&\lim_{x \to -\infty} \frac{\sqrt{4x^2-x}}{x} \\
+	&= \lim_{x \to -\infty} \frac{\sqrt{4x^2-x}}{-\sqrt{x^2}} \\
+	&= -\lim_{x \to -\infty} \sqrt{\frac{4x^2-x}{x^2}} \\
+	&= -\lim_{x \to -\infty} \sqrt{4-\frac{1}{x}} \\
+	&= -\sqrt{4-0} \\
+	&= -2
+\end{align*}
+
+\end{multicols}
+
+\end{document}
